@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrate</title>
+
+    <link rel="icon" href="img/dog4.jpg">
+
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="assets/bootstrap.js">
+    <link rel="stylesheet" href="assets/bootstrap.css">
+</head>
+<body>
+
+    <!--BARRA DE NAVEGACION-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+
+      <img src="img/dog icon.jpg" alt="BRAND" height="80px" width="100px">
+
+      <a class="navbar-brand" href="inicio_carousel.html">Inicio</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="categoria collares.html">Accesorios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="suscripcion.html">Suscribete</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disable" href="pag4.html"></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Otras funciones
+            </a>
+            <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!--FORMULARIO INSCRIPCION-->
+
+  <main class="container mt-4 mb-4">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Para realizar seguimiento a tus productos y acceder a ofertas exclusivas, ingresa tus datos a continuacion...</h3>
+          </div>
+
+
+          <div class="card-body">
+            <form action="#" method="GET" enctype="text/plain">
+              <!--agrupar componentes usando form group-->
+              <div class="form-group">
+                <label for="rut" class="font-weight-bold">Rut:</label>
+                <input class="form-control" type="text" name="rut" id="rut" placeholder="Ej. 12345678-9" required>
+              </div>
+
+              <div class="form-group">
+                <label for="nombre" class="font-weight-bold">Nombre:</label>
+                <input class="form-control" type="text" name="nombre" id="nombre"
+                  placeholder="Ej. sacaria flores del campo" required>
+              </div>
+
+              <div class="form-group">
+                <label for="fecha_nacimiento" class="font-weight-bold">Fecha Nacimiento:</label>
+                <input class="form-control" type="date" name="fecha_nacimiento" id="fecha_nacimiento" required>
+              </div>
+
+              <!--agrupar componentes usando form group row-->
+              <div class="form-group row">
+                <label for="email" class="col-sm-5 col-form-label font-weight-bold">Email:</label>
+                <div class="col-sm-7">
+                  <input class="form-control" type="email" name="email" id="email" placeholder="Ej. correo@correo.com "
+                    required>
+
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="password" class="col-sm-5 col-form-label font-weight-bold">Contraseña:</label>
+                <div class="col-sm-7">
+                  <input class="form-control" type="password" name="password" id="email" placeholder="fsh8pu2l29k"
+                    required>
+
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="confirm-password" class="col-sm-5 col-form-label font-weight-bold">Confirmar
+                  Contraseña:</label>
+                <div class="col-sm-7">
+                  <input class="form-control" type="password" name="confirm-password" id="confirm-password"
+                    placeholder="fsh8pu2l29k" required>
+
+                </div>
+              </div>
+
+              <!--Radiobutton-->
+              <div class="form-group row">
+                <label for="genero" class="col-sm-5 col-form-label font-weight-bold">Preferencia del can: </label>
+                <div class="col-sm-7">
+                  <div class="form-check">
+                    <div class="form-check-label">
+                      <label for="masculino" class="form-check-label">
+                        <input class="form-check-input" type="radio" name="genero" id="masculino"
+                          value="masculino">Macho
+                      </label>
+                    </div>
+                    <div class="form-check-label">
+                      <label for="femenino" class="form-check-label">
+                        <input class="form-check-input" type="radio" name="genero" id="femenino"
+                          value="femenino">Hembra
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Select o Combobox-->
+              <div class="form-group">
+                <label for="comuna" class="font-weight-bold">Comuna: </label>
+                <select name="comuna" id="comuna" class="form-control">
+                  <option value="Santiago">Santiago</option>
+                  <option value="Macul">Macul</option>
+                  <option value="Ñuñoa">Ñuñoa</option>
+                  <option value="Puente Alto">Puente Alto</option>
+                  <option value="San Miguel">San Miguel</option>
+                  <option value="San Joaquín">San Joaquín</option>
+                </select>
+              </div>
+
+              <!--Textarea-->
+              <div class="form-group">
+                <label for="comentarios" class="font-weight-bold">Comentarios: </label>
+                <textarea class="form-control" name="comentarios" id="comentarios" cols="30" rows="5"></textarea>
+              </div>
+
+              <!--Toogle button o Switch-->
+              <div class="form-group">
+                <div class="custom-control custom-switch">
+                  <input class="custom-control-input" type="checkbox" name="aceptar_terminos" id="aceptar_terminos" required>
+                  <label for="aceptar_terminos" class="custom-control-label">Aceptar los términos del contrato.</label>
+                </div>
+              </div>
+
+              <!--Botones-->
+              <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Registrar" id="registrar">
+                <input class="btn btn-danger" type="reset" value="Cancelar" id="cancelar">
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+
+      </div>
+      <div class="col-md-6">
+        <img class="d-none d-md-block" src="img/dog5.jpg" alt="imagen costado formulario" width="100%"
+          height="100%">
+
+      </div>
+    </div>
+  </main>
+
+
+  <!--FOOTER-->
+  <div class="footer mt-4 py-4 bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-3 text-center mt-4">
+                <img src="img/aligator.png" alt="BRAND" height="80px" width="80px">
+            </div>
+            <div class="col-sm-12 col-md-3 mt-4 mb-4">
+                <!--LISTA VERTICAL como barra de navegacion-->
+                <p class="text-light">pero pa que po</p>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="inicio_carousel.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categoria collares.html">Productos</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="suscripcion.html">Suscribete</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="pag4.html">Disabled</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-sm-12 col-md-3 mt-4 mb-4">
+                <div class="card bg-dark text-light">
+                    <div class="card-header text-center">
+                        <h3 class="card-title">¡SUSCRIBETE A NUESTRO NEWLETTER!</h3>
+
+                    </div>
+
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="email" class="form-control" name="email" placeholder="correo@correo.com">
+                            <div class="input-group-append">
+                                <button class="btn btn-success" type="submit">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>
