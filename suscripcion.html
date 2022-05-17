@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrate</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src=api.js></script>
 
     <link rel="icon" href="img/dog4.jpg">
 
@@ -86,46 +88,45 @@
               <div class="form-group">
                 <label for="rut" class="font-weight-bold">Rut:</label>
                 <input class="form-control" type="text" name="rut" id="rut" placeholder="Ej. 12345678-9" required>
+                <div id="mensaje1" class="errores">El rut no puede estar vacio  </div>
+             
               </div>
 
               <div class="form-group">
                 <label for="nombre" class="font-weight-bold">Nombre:</label>
                 <input class="form-control" type="text" name="nombre" id="nombre"
                   placeholder="Ej. sacaria flores del campo" required>
+                  <div id="mensaje2" class="errores">el nombre no puede estar vacio</div>
               </div>
 
               <div class="form-group">
                 <label for="fecha_nacimiento" class="font-weight-bold">Fecha Nacimiento:</label>
-                <input class="form-control" type="date" name="fecha_nacimiento" id="fecha_nacimiento" required>
+                <input class="form-control" type="date" name="fecha_nacimiento" id="fecha" required>
+              <div id="mensaje3" class="errores"> debe escoger fecha de nacimiento</div>
               </div>
+
+
 
               <!--agrupar componentes usando form group row-->
-              <div class="form-group row">
-                <label for="email" class="col-sm-5 col-form-label font-weight-bold">Email:</label>
-                <div class="col-sm-7">
+              <div class="form-group">
+                <label for="email" class="font-weight-bold">Email:</label>
                   <input class="form-control" type="email" name="email" id="email" placeholder="Ej. correo@correo.com "
                     required>
-
-                </div>
+                    <div id="mensaje4" class="errores">Correo no puede estar vacio </div>
               </div>
 
-              <div class="form-group row">
-                <label for="password" class="col-sm-5 col-form-label font-weight-bold">Contraseña:</label>
-                <div class="col-sm-7">
-                  <input class="form-control" type="password" name="password" id="email" placeholder="fsh8pu2l29k"
+              <div class="form-group">
+                <label for="password" class="font-weight-bold">Contraseña:</label>
+                  <input class="form-control" type="password" name="password" id="pass" placeholder="fsh8pu2l29k"
                     required>
-
-                </div>
+                <div id="mensaje5" class="errores" >Contraseña no puede estar vacia</div>
               </div>
-
-              <div class="form-group row">
-                <label for="confirm-password" class="col-sm-5 col-form-label font-weight-bold">Confirmar
-                  Contraseña:</label>
-                <div class="col-sm-7">
+              
+              <div class="form-group">
+                <label for="confirm-password" class="font-weight-bold">Confirmar
+                  Contraseña:</label> 
                   <input class="form-control" type="password" name="confirm-password" id="confirm-password"
                     placeholder="fsh8pu2l29k" required>
-
-                </div>
               </div>
 
               <!--Radiobutton-->
@@ -150,16 +151,11 @@
               </div>
 
               <!--Select o Combobox-->
-              <div class="form-group">
-                <label for="comuna" class="font-weight-bold">Comuna: </label>
-                <select name="comuna" id="comuna" class="form-control">
-                  <option value="Santiago">Santiago</option>
-                  <option value="Macul">Macul</option>
-                  <option value="Ñuñoa">Ñuñoa</option>
-                  <option value="Puente Alto">Puente Alto</option>
-                  <option value="San Miguel">San Miguel</option>
-                  <option value="San Joaquín">San Joaquín</option>
-                </select>
+              <div class="data list-wrap">
+                <label class="label">Region: </label>
+               <select id="region">
+                <option value="0">Seleccione region</option>
+               </select>
               </div>
 
               <!--Textarea-->
@@ -172,13 +168,14 @@
               <div class="form-group">
                 <div class="custom-control custom-switch">
                   <input class="custom-control-input" type="checkbox" name="aceptar_terminos" id="aceptar_terminos" required>
-                  <label for="aceptar_terminos" class="custom-control-label">Aceptar los términos del contrato.</label>
+                  <label for="aceptar_terminos" class="custom-control-label">Aceptar los términos del contrato.</label>   
+                  <div id="mensaje6" class="errores">Campo obligagorio</div> 
                 </div>
               </div>
 
               <!--Botones-->
               <div class="form-group">
-                <input class="btn btn-primary" type="submit" value="Registrar" id="registrar">
+                <input class="btn btn-primary" type="submit" value="Registrar" id="bRegistrar">
                 <input class="btn btn-danger" type="reset" value="Cancelar" id="cancelar">
               </div>
 
@@ -190,10 +187,8 @@
 
 
       </div>
-      <div class="col-md-6">
-        <img class="d-none d-md-block" src="img/dog5.jpg" alt="imagen costado formulario" width="100%"
-          height="100%">
-
+      <div class="col-md-6" id="prueba"> 
+       
       </div>
     </div>
   </main>
@@ -204,11 +199,10 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-3 text-center mt-4">
-                <img src="img/aligator.png" alt="BRAND" height="80px" width="80px">
+                <img src="img/dog icon.jpg" alt="BRAND" height="80px" width="80px">
             </div>
             <div class="col-sm-12 col-md-3 mt-4 mb-4">
                 <!--LISTA VERTICAL como barra de navegacion-->
-                <p class="text-light">pero pa que po</p>
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="inicio_carousel.html">Inicio</a>
@@ -239,7 +233,7 @@
                         <div class="input-group">
                             <input type="email" class="form-control" name="email" placeholder="correo@correo.com">
                             <div class="input-group-append">
-                                <button class="btn btn-success" type="submit">Enviar</button>
+                                <input class="btn btn-success" type="submit" value="Enviar" id="bEnviar">
                             </div>
                         </div>
                     </div>
@@ -254,6 +248,60 @@
         </div>
     </div>
 </div>
+
+<script>
+   
+ 
+  $(document).ready(function(){
+    $("#bRegistrar").click(function(){
+        var rut= $("#rut").val();
+        var nombre= $("#nombre").val();
+        var fecha= $("#fecha").val();
+        var asunto=$("#itAsunto").val(); 
+        var email=$("#email").val();   
+        var pass=$("#pass").val();     
+        var aceptar_terminos=$("#aceptar_terminos").is(":checked");    
+        console.log(aceptar_terminos)
+        if(rut == ""){
+            $("#mensaje1").fadeIn();
+        }else{
+            $("#mensaje1").fadeOut();
+        }
+        if(nombre == ""){
+            $("#mensaje2").fadeIn();
+        }else{
+            $("#mensaje2").fadeOut();
+        }
+        if(fecha == ""){
+            $("#mensaje3").fadeIn();
+        }else{
+            $("#mensaje3").fadeOut();
+        }
+        if(email == ""){
+            $("#mensaje4").fadeIn();
+        }else{
+            $("#mensaje4").fadeOut();
+        }
+        if(pass == ""){
+            $("#mensaje5").fadeIn();
+        }else{
+            $("#mensaje5").fadeOut();
+        }
+        if(!aceptar_terminos){
+            $("#mensaje6").fadeIn();
+        }else{
+            $("#mensaje6").fadeOut();
+        }
+        
+    });
+ });
+ 
     
+ </script>
 </body>
+
 </html>
+
+
+
+
