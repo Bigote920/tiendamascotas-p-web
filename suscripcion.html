@@ -59,9 +59,7 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
+         
         </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -125,8 +123,9 @@
               <div class="form-group">
                 <label for="confirm-password" class="font-weight-bold">Confirmar
                   Contraseña:</label> 
-                  <input class="form-control" type="password" name="confirm-password" id="confirm-password"
+                  <input class="form-control" type="password" name="confirm-" id="confirm"
                     placeholder="fsh8pu2l29k" required>
+                    <div id="mensaje7" class="errores" >Campo obligatorio</div>
               </div>
 
               <!--Radiobutton-->
@@ -259,7 +258,8 @@
         var fecha= $("#fecha").val();
         var asunto=$("#itAsunto").val(); 
         var email=$("#email").val();   
-        var pass=$("#pass").val();     
+        var pass=$("#pass").val(); 
+       var  confirm=$("#pass").val();     
         var aceptar_terminos=$("#aceptar_terminos").is(":checked");    
         console.log(aceptar_terminos)
         if(rut == ""){
@@ -291,6 +291,11 @@
             $("#mensaje6").fadeIn();
         }else{
             $("#mensaje6").fadeOut();
+        }
+        if(!confirm){
+            $("#mensaje7").fadeIn();
+        }else{
+            $("#mensaje7").fadeOut();
         }
         
     });
